@@ -26,7 +26,7 @@
     <repositories>
         <repository>
             <id>java.net</id>
-            <name>repository jogl</name>
+            <name>Java.Net repository</name>
             <url>http://download.java.net/maven/2/</url>
             <snapshots>
                 <enabled>false</enabled>
@@ -49,6 +49,20 @@
             </snapshots>
         </repository>
         <repository>
+            <id>maven2-release-repository.tidalwave.it</id>
+            <name>Tidalwave Release Repository</name>
+            <url>http://services.tidalwave.it/nexus/content/repositories/releases</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>projectlombok.org</id>
+            <name>Lombok Repository</name>
+            <url>http://projectlombok.org/mavenrepo</url>
+        </repository>
+
+        <repository>
             <id>snapshots-oss.sonatype.org</id>
             <name>Sonatype Snapshots Repository</name>
             <url>http://oss.sonatype.org/content/repositories/snapshots/</url>
@@ -57,14 +71,6 @@
             </releases>
             <snapshots>
                 <enabled>true</enabled>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>maven2-release-repository.tidalwave.it</id>
-            <name>Tidalwave Release Repository</name>
-            <url>http://services.tidalwave.it/nexus/content/repositories/releases</url>
-            <snapshots>
-                <enabled>false</enabled>
             </snapshots>
         </repository>
         <repository>
@@ -77,11 +83,6 @@
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
-        </repository>
-        <repository>
-            <id>projectlombok.org</id>
-            <name>Lombok Repository</name>
-            <url>http://projectlombok.org/mavenrepo</url>
         </repository>
     </repositories>
 
@@ -107,6 +108,19 @@
             </build>
         </profile>
     </profiles>
+
+    <build>
+        <plugins>
+            <!-- FIXME: move to TFT super pom -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>${tft.mainClass}</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
 
