@@ -18,6 +18,13 @@
     <description>Tidalwave Super POM</description>
     <inceptionYear>2010</inceptionYear>
 
+    <!-- Repeated because of http://jira.codehaus.org/browse/SCM-442 -->
+    <scm>
+        <connection>scm:hg:${scm.repo.readonly.url}</connection>
+        <developerConnection>scm:hg:${scm.repo.effective.url}</developerConnection>
+        <url>${scm.repo.browse.url}</url>
+    </scm>
+
     <ciManagement>
         <system>hudson</system>
         <url>http://hudson.tidalwave.it/hudson/</url>
