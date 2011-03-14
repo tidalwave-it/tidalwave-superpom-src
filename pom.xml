@@ -6,7 +6,7 @@
     <parent>
         <groupId>it.tidalwave.thesefoolishthings</groupId>
         <artifactId>superpom</artifactId>
-        <version>1.0.18</version>
+        <version>1.0.18-SNAPSHOT</version>
     </parent>
 
     <groupId>it.tidalwave.superpom</groupId>
@@ -63,11 +63,6 @@
                 <enabled>false</enabled>
             </snapshots>
         </repository>
-        <repository>
-            <id>projectlombok.org</id>
-            <name>Lombok Repository</name>
-            <url>http://projectlombok.org/mavenrepo</url>
-        </repository>
 
         <repository>
             <id>snapshots-oss.sonatype.org</id>
@@ -115,19 +110,6 @@
             </build>
         </profile>
     </profiles>
-
-    <build>
-        <plugins>
-            <!-- FIXME: move to TFT super pom -->
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>exec-maven-plugin</artifactId>
-                <configuration>
-                    <mainClass>${tft.mainClass}</mainClass>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
 
 </project>
 
