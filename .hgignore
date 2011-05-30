@@ -1,0 +1,11 @@
+target
+.repository
+.revision
+release.properties
+derby.log
+.DS_Store
+\.orig\..*$
+\.orig$
+\.chg\..*$
+\.rej$
+\.conflict\~$
