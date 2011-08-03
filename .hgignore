@@ -1,6 +1,6 @@
 target
 .repository
-.revision
+.description
 release.properties
 derby.log
 .DS_Store
