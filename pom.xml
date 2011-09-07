@@ -33,7 +33,7 @@
 
     <ciManagement>
         <system>hudson</system>
-        <url>http://hudson.tidalwave.it/hudson/${tidalwave.ci.view}</url>
+        <url>http://hudson.tidalwave.it/hudson/view/${tidalwave.ci.view}</url>
     </ciManagement>
 
     <repositories>
