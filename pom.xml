@@ -37,14 +37,14 @@
     </ciManagement>
 
     <repositories>
-        <repository>
+        <!-- repository>
             <id>java.net</id>
             <name>Java.Net repository</name>
             <url>http://download.java.net/maven/2/</url>
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
-        </repository>
+        </repository -->
         <repository>
             <id>netbeans</id>
             <name>NetBeans Platform Maven Repository</name>
@@ -69,22 +69,10 @@
                 <enabled>false</enabled>
             </snapshots>
         </repository>
-
         <repository>
             <id>snapshots-oss.sonatype.org</id>
             <name>Sonatype Snapshots Repository</name>
             <url>http://oss.sonatype.org/content/repositories/snapshots/</url>
-            <releases>
-                <enabled>false</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>maven2-snapshots-repository.tidalwave.it</id>
-            <name>Tidalwave Snapshots Repository</name>
-            <url>http://services.tidalwave.it/nexus/content/repositories/snapshots</url>
             <releases>
                 <enabled>false</enabled>
             </releases>
