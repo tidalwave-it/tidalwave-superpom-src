@@ -12,7 +12,7 @@
     <groupId>it.tidalwave.superpom</groupId>
     <artifactId>superpom</artifactId>
     <packaging>pom</packaging>
-    <version>1.18</version>
+    <version>1.19-SNAPSHOT</version>
     <name>Tidalwave - SuperPOM</name>
     <url>http://tidalwave.kenai.com</url>
     <description>Tidalwave Super POM</description>
