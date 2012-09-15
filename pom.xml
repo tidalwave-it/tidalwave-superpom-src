@@ -12,14 +12,14 @@
     <groupId>it.tidalwave.superpom</groupId>
     <artifactId>superpom</artifactId>
     <packaging>pom</packaging>
-    <version>2.0-SNAPSHOT</version>
+    <version>2.0</version>
     <name>Tidalwave - SuperPOM</name>
     <url>http://tidalwave.kenai.com</url>
     <description>Tidalwave Super POM</description>
     <inceptionYear>2010</inceptionYear>
 
     <properties>
-        <tidalwave.ci.view></tidalwave.ci.view>
+        <tidalwave.ci.view />
         <tft.UmlGraphDoc.version>5.4</tft.UmlGraphDoc.version> <!-- available at http://services.tidalwave.it/nexus/content/repositories/releases -->
         <tft.UmlGraphDoc.additionalParam>-views -attributes -operations -types -postfixpackage -nodefontpackagesize 6 -nodefontclasssize 8 -nodefontsize 7 -edgefontsize 7 -nodesep 0.05 -ranksep 0.1 -visibility -inferrel -hide java.*|javax.*</tft.UmlGraphDoc.additionalParam>
     </properties>
