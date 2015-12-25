@@ -14,9 +14,15 @@
     <packaging>pom</packaging>
     <version>3.2-SNAPSHOT</version>
     <name>Tidalwave - SuperPOM</name>
-    <url>http://tidalwave.kenai.com</url>
-    <description>Tidalwave Super POM</description>
+    <url>http://tidalwave.tidalwave.it</url>
     <inceptionYear>2010</inceptionYear>
+    <description>
+[![Build Status](https://drone.io/bitbucket.org/tidalwave/tidalwave-superpom-src/status.png)](https://drone.io/bitbucket.org/tidalwave/tidalwave-superpom-src/latest)
+
+The SuperPOM for all Tidalwave projects. It is not designed for being used by others, as it contains some corporate-specific
+configurations, but its ancestor [TheseFooolishThings SuperPOM](http://bitbucket.org/tidalwave/thesefoolishthings-superpom-src) has been designed to be reusable. 
+Please have a look at it.
+    </description>
 
     <properties>
         <tidalwave.ci.view />
@@ -28,11 +34,11 @@
 
     <!-- Repeated because of http://jira.codehaus.org/browse/SCM-442 -->
     <scm>
-        <connection>scm:git:${scm.repo.readonly.url}</connection>
-        <developerConnection>scm:git:${scm.repo.effective.url}</developerConnection>
+        <connection>scm:hg:${scm.repo.readonly.url}</connection>
+        <developerConnection>scm:hg:${scm.repo.effective.url}</developerConnection>
         <url>${scm.repo.browse.url}</url>
       <tag>HEAD</tag>
-    </scm>
+  </scm>
 
     <issueManagement>
         <system>Jira</system>
