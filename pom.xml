@@ -39,7 +39,7 @@ Please have a look at it.
         <developerConnection>scm:git:${scm.repo.effective.url}</developerConnection>
         <url>${scm.repo.browse.url}</url>
       <tag>HEAD</tag>
-  </scm>
+    </scm>
 
     <issueManagement>
         <system>Jira</system>
@@ -47,8 +47,8 @@ Please have a look at it.
     </issueManagement>
 
     <ciManagement>
-        <system>hudson</system>
-        <url>http://ci.tidalwave.it/ci/view/${tidalwave.ci.view}</url>
+        <system>Jenkins</system>
+        <url>http://services.tidalwave.it/ci/view/${tidalwave.ci.view}</url>
     </ciManagement>
 
     <repositories>
@@ -88,6 +88,63 @@ Please have a look at it.
             </snapshots>
         </repository>
     </repositories>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${tft.lombok.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.aspectj</groupId>
+                <artifactId>aspectjrt</artifactId>
+                <version>${tft.aspectjrt.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>it.tidalwave.netbeans.boot</groupId>
+                <artifactId>base-launcher</artifactId>
+                <version>${tft.capecanaveral.version}</version>
+            </dependency>
+
+            <!--==== Testing ======================================================================================-->
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${tft.junit.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.testng</groupId>
+                <artifactId>testng</artifactId>
+                <version>${tft.testng.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-core</artifactId>
+                <version>${tft.mockito.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-all</artifactId>
+                <version>${tft.mockito.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.hamcrest</groupId>
+                <artifactId>hamcrest-core</artifactId>
+                <version>${tft.hamcrest-matchers.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.hamcrest</groupId>
+                <artifactId>hamcrest-library</artifactId>
+                <version>${tft.hamcrest-matchers.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.hamcrest</groupId>
+                <artifactId>hamcrest-all</artifactId>
+                <version>${tft.hamcrest-matchers.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <profiles>
         <profile>
