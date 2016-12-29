@@ -6,14 +6,14 @@
     <parent>
         <groupId>it.tidalwave.thesefoolishthings</groupId>
         <artifactId>superpom</artifactId>
-        <version>3.3</version>
+        <version>4.0</version>
         <relativePath />
     </parent>
 
     <groupId>it.tidalwave.superpom</groupId>
     <artifactId>superpom</artifactId>
     <packaging>pom</packaging>
-    <version>3.4-SNAPSHOT</version>
+    <version>4.0-SNAPSHOT</version>
     <name>Tidalwave - SuperPOM</name>
     <url>http://tidalwave.tidalwave.it</url>
     <inceptionYear>2010</inceptionYear>
@@ -21,7 +21,7 @@
 [![Build Status](https://drone.io/bitbucket.org/tidalwave/tidalwave-superpom-src/status.png)](https://drone.io/bitbucket.org/tidalwave/tidalwave-superpom-src/latest)
 
 The SuperPOM for all Tidalwave projects. It is not designed for being used by others, as it contains some corporate-specific
-configurations, but its ancestor [TheseFooolishThings SuperPOM](http://bitbucket.org/tidalwave/thesefoolishthings-superpom-src) has been designed to be reusable. 
+configurations, but its ancestor [TheseFooolishThings SuperPOM](http://bitbucket.org/tidalwave/thesefoolishthings-superpom-src) has been designed to be reusable.
 Please have a look at it.
     </description>
 
@@ -53,25 +53,9 @@ Please have a look at it.
 
     <repositories>
         <repository>
-            <id>netbeans</id>
-            <name>NetBeans Platform Maven Repository</name>
-            <url>http://bits.netbeans.org/maven2/</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-        <repository>
             <id>releases-oss.sonatype.org</id>
             <name>Sonatype Release Repository</name>
             <url>http://oss.sonatype.org/content/repositories/releases/</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>maven2-release-repository.tidalwave.it</id>
-            <name>Tidalwave Release Repository</name>
-            <url>http://services.tidalwave.it/nexus/content/repositories/releases</url>
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
@@ -91,62 +75,77 @@ Please have a look at it.
 
     <dependencyManagement>
         <dependencies>
-            <dependency>
-                <groupId>org.projectlombok</groupId>
-                <artifactId>lombok</artifactId>
-                <version>${tft.lombok.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.aspectj</groupId>
-                <artifactId>aspectjrt</artifactId>
-                <version>${tft.aspectjrt.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>it.tidalwave.netbeans.boot</groupId>
-                <artifactId>base-launcher</artifactId>
-                <version>${tft.capecanaveral.version}</version>
-            </dependency>
-
             <!--==== Testing ======================================================================================-->
+            <!-- FIXME: push to Super POM -->
             <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
                 <version>${tft.junit.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.testng</groupId>
-                <artifactId>testng</artifactId>
-                <version>${tft.testng.version}</version>
-            </dependency>
-            <dependency>
                 <groupId>org.mockito</groupId>
                 <artifactId>mockito-core</artifactId>
                 <version>${tft.mockito.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.mockito</groupId>
-                <artifactId>mockito-all</artifactId>
-                <version>${tft.mockito.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.hamcrest</groupId>
-                <artifactId>hamcrest-core</artifactId>
-                <version>${tft.hamcrest-matchers.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.hamcrest</groupId>
-                <artifactId>hamcrest-library</artifactId>
-                <version>${tft.hamcrest-matchers.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.hamcrest</groupId>
-                <artifactId>hamcrest-all</artifactId>
-                <version>${tft.hamcrest-matchers.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
 
     <profiles>
+    <!--================================================================================================================
+
+    This profile activates all the required support for the TheseFoolishThings Spring Message Bus, including AOP.
+
+    =================================================================================================================-->
+        <profile>
+            <id>it.tidalwave-spring-messagebus-v1</id>
+            <activation>
+                <file>
+                    <exists>src/config/activate-it.tidalwave-spring-messagebus-v1-profile</exists>
+                </file>
+            </activation>
+
+            <dependencies>
+                <dependency>
+                    <groupId>it.tidalwave.thesefoolishthings</groupId>
+                    <artifactId>it-tidalwave-messagebus-spring</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>it.tidalwave.thesefoolishthings</groupId>
+                    <artifactId>it-tidalwave-messagebus</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring-aspects</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.aspectj</groupId>
+                    <artifactId>aspectjrt</artifactId>
+                </dependency>
+            </dependencies>
+
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>aspectj-maven-plugin</artifactId>
+                        <configuration>
+                            <aspectLibraries combine.children="append">
+                                <dependency>
+                                    <groupId>it.tidalwave.thesefoolishthings</groupId>
+                                    <artifactId>it-tidalwave-messagebus-spring</artifactId>
+                                </dependency>
+                            </aspectLibraries>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+    <!--================================================================================================================
+
+
+    
+    =================================================================================================================-->
         <profile>
             <id>graph</id>
             <pluginRepositories>
