@@ -6,14 +6,14 @@
     <parent>
         <groupId>it.tidalwave.thesefoolishthings</groupId>
         <artifactId>superpom</artifactId>
-        <version>4.0</version>
+        <version>4.1</version>
         <relativePath />
     </parent>
 
     <groupId>it.tidalwave.superpom</groupId>
     <artifactId>superpom</artifactId>
     <packaging>pom</packaging>
-    <version>4.0.2-SNAPSHOT</version>
+    <version>4.1-SNAPSHOT</version>
     <name>Tidalwave - SuperPOM</name>
     <url>http://tidalwave.tidalwave.it</url>
     <inceptionYear>2010</inceptionYear>
