@@ -183,6 +183,31 @@ Please have a look at it.
                     </properties>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-enforcer-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>enforce-banned-dependencies</id>
+                        <goals>
+                            <goal>enforce</goal>
+                        </goals>
+                        <configuration>
+                            <rules>
+                                <bannedDependencies>
+                                    <excludes>
+                                        <exclude>commons-logging:commons-logging</exclude>
+                                        <exclude>org.aspectj:aspectjweaver</exclude>
+                                        <exclude>com.kenai.nbpwr:org-slf4j-jdk14</exclude>
+                                        <exclude>com.google.code.findbugs:annotations</exclude>
+                                    </excludes>
+                                </bannedDependencies>
+                            </rules>
+                            <fail>true</fail>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
 
