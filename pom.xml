@@ -13,7 +13,7 @@
     <groupId>it.tidalwave.superpom</groupId>
     <artifactId>superpom</artifactId>
     <packaging>pom</packaging>
-    <version>4.8-SNAPSHOT</version>
+    <version>4.8</version>
     <name>Tidalwave - SuperPOM</name>
     <url>http://tidalwave.tidalwave.it</url>
     <inceptionYear>2010</inceptionYear>
@@ -35,7 +35,7 @@ Please have a look at it.
         <connection>scm:git:${scm.repo.readonly.url}</connection>
         <developerConnection>scm:git:${scm.repo.effective.url}</developerConnection>
         <url>${scm.repo.browse.url}</url>
-      <tag>HEAD</tag>
+      <tag>4.8</tag>
     </scm>
 
     <issueManagement>
