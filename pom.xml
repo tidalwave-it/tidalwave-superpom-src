@@ -6,7 +6,7 @@
     <parent>
         <groupId>it.tidalwave.thesefoolishthings</groupId>
         <artifactId>superpom</artifactId>
-        <version>4.6</version>
+        <version>4.7</version>
         <relativePath />
     </parent>
 
@@ -27,9 +27,6 @@ Please have a look at it.
 
     <properties>
         <tidalwave.ci.view />
-        <tft.UmlGraphDoc.version>5.4</tft.UmlGraphDoc.version> <!-- available at http://services.tidalwave.it/nexus/content/repositories/releases -->
-        <tft.UmlGraphDoc.additionalParam>-views -attributes -operations -types -postfixpackage -nodefontpackagesize 6 -nodefontclasssize 8 -nodefontsize 7 -edgefontsize 7 -nodesep 0.05 -ranksep 0.1 -visibility -inferrel -hide java.*|javax.*</tft.UmlGraphDoc.additionalParam>
-
         <tft.test.listeners>it.tidalwave.util.test.TestLogger</tft.test.listeners>
     </properties>
 
@@ -60,7 +57,7 @@ Please have a look at it.
         <repository>
             <id>maven2-thirdparty-repository.tidalwave.it</id>
             <name>Tidalwave Release Repository</name>
-            <url>http://services.tidalwave.it/nexus/content/repositories/thirdparty</url>
+            <url>http://services.tidalwave.it/nexus/content/repositories/thirdparty/</url>
         </repository>
     </repositories>
 
