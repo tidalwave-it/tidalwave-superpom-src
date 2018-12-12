@@ -26,6 +26,7 @@ Please have a look at it.
     </description>
 
     <properties>
+        <tft.maven.requiredVersion>3.6.0</tft.maven.requiredVersion>
         <tidalwave.ci.view />
         <tft.test.listeners>it.tidalwave.util.test.TestLogger</tft.test.listeners>
     </properties>
