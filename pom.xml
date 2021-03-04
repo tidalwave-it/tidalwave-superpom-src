@@ -6,7 +6,7 @@
     <parent>
         <groupId>it.tidalwave.thesefoolishthings</groupId>
         <artifactId>superpom</artifactId>
-        <version>4.15</version>
+        <version>4.16</version>
         <relativePath />
     </parent>
 
@@ -169,6 +169,30 @@ Please have a look at it.
 
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <!-- Configuration must be replicated in reporting section -->
+                <configuration>
+                    <tags>
+                        <tag>
+                            <name>it.tidalwave.javadoc.stable</name>
+                            <placement>t</placement>
+                            <head>Status: stable API</head>
+                        </tag>
+                        <tag>
+                            <name>it.tidalwave.javadoc.draft</name>
+                            <placement>t</placement>
+                            <head>Status: draft API</head>
+                        </tag>
+                        <tag>
+                            <name>it.tidalwave.javadoc.experimental</name>
+                            <placement>t</placement>
+                            <head>Status: experimental API</head>
+                        </tag>
+                    </tags>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
