@@ -1,5 +1,4 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
 
@@ -7,13 +6,13 @@
         <groupId>it.tidalwave.thesefoolishthings</groupId>
         <artifactId>superpom</artifactId>
         <version>5.0-ALPHA-5</version>
-        <relativePath/>
+        <relativePath />
     </parent>
 
     <groupId>it.tidalwave.superpom</groupId>
     <artifactId>superpom</artifactId>
     <packaging>pom</packaging>
-    <version>5.0-ALPHA-5-SNAPSHOT</version>
+    <version>5.0-ALPHA-5</version>
     <name>Tidalwave - SuperPOM</name>
     <url>http://tidalwave.tidalwave.it</url>
     <inceptionYear>2010</inceptionYear>
@@ -29,8 +28,8 @@
 
     <properties>
         <tft.maven.requiredVersion>3.6.0</tft.maven.requiredVersion>
-        <tidalwave.ci.view/>
-        <tidalwave.issues/>
+        <tidalwave.ci.view />
+        <tidalwave.issues />
         <tft.test.listeners>it.tidalwave.util.test.TestLogger</tft.test.listeners>
 
         <tft.UmlGraphDoc.additionalParam>
@@ -44,7 +43,7 @@
         <connection>scm:git:${scm.repo.readonly.url}</connection>
         <developerConnection>scm:git:${scm.repo.effective.url}</developerConnection>
         <url>${scm.repo.browse.url}</url>
-        <tag>HEAD</tag>
+        <tag>5.0-ALPHA-5</tag>
     </scm>
 
     <issueManagement>
