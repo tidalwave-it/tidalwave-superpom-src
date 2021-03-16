@@ -167,6 +167,18 @@
                 </plugins>
             </build>
         </profile>
+
+        <!--================================================================================================================
+
+
+
+        =================================================================================================================-->
+        <profile>
+            <id>it.tidalwave-site-docs-maven-skin-v1</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
     </profiles>
 
     <build>
