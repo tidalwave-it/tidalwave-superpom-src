@@ -1,5 +1,5 @@
-
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
 
@@ -7,7 +7,7 @@
         <groupId>it.tidalwave.thesefoolishthings</groupId>
         <artifactId>superpom</artifactId>
         <version>5.0-ALPHA-5-SNAPSHOT</version>
-        <relativePath />
+        <relativePath/>
     </parent>
 
     <groupId>it.tidalwave.superpom</groupId>
@@ -18,16 +18,18 @@
     <url>http://tidalwave.tidalwave.it</url>
     <inceptionYear>2010</inceptionYear>
     <description>
-[![Build Status](https://drone.io/bitbucket.org/tidalwave/tidalwave-superpom-src/status.png)](https://drone.io/bitbucket.org/tidalwave/tidalwave-superpom-src/latest)
+        [![Build
+        Status](https://drone.io/bitbucket.org/tidalwave/tidalwave-superpom-src/status.png)](https://drone.io/bitbucket.org/tidalwave/tidalwave-superpom-src/latest)
 
-The SuperPOM for all Tidalwave projects. It is not designed for being used by others, as it contains some corporate-specific
-configurations, but its ancestor [TheseFooolishThings SuperPOM](http://bitbucket.org/tidalwave/thesefoolishthings-superpom-src) has been designed to be reusable.
-Please have a look at it.
+        The SuperPOM for all Tidalwave projects. It is not designed for being used by others, as it contains some corporate-specific
+        configurations, but its ancestor [TheseFooolishThings SuperPOM](http://bitbucket.org/tidalwave/thesefoolishthings-superpom-src) has been designed to be
+        reusable.
+        Please have a look at it.
     </description>
 
     <properties>
         <tft.maven.requiredVersion>3.6.0</tft.maven.requiredVersion>
-        <tidalwave.ci.view />
+        <tidalwave.ci.view/>
         <tft.test.listeners>it.tidalwave.util.test.TestLogger</tft.test.listeners>
     </properties>
 
@@ -36,7 +38,7 @@ Please have a look at it.
         <connection>scm:git:${scm.repo.readonly.url}</connection>
         <developerConnection>scm:git:${scm.repo.effective.url}</developerConnection>
         <url>${scm.repo.browse.url}</url>
-      <tag>HEAD</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <issueManagement>
@@ -90,11 +92,11 @@ Please have a look at it.
     </dependencyManagement>
 
     <profiles>
-    <!--================================================================================================================
+        <!--================================================================================================================
 
-    This profile activates all the required support for the TheseFoolishThings Spring Message Bus, including AOP.
+        This profile activates all the required support for the TheseFoolishThings Spring Message Bus, including AOP.
 
-    =================================================================================================================-->
+        =================================================================================================================-->
         <profile>
             <id>it.tidalwave-spring-messagebus-v1</id>
             <activation>
@@ -140,11 +142,11 @@ Please have a look at it.
             </build>
         </profile>
 
-    <!--================================================================================================================
+        <!--================================================================================================================
 
 
 
-    =================================================================================================================-->
+        =================================================================================================================-->
         <profile>
             <id>graph</id>
             <pluginRepositories>
