@@ -204,6 +204,11 @@
                             <placement>t</placement>
                             <head>Status: experimental API</head>
                         </tag>
+                        <tag>
+                            <name>stereotype</name>
+                            <placement>t</placement>
+                            <head>Stereotype:</head>
+                        </tag>
                     </tags>
                 </configuration>
             </plugin>
@@ -270,6 +275,11 @@
                             <name>it.tidalwave.javadoc.experimental</name>
                             <placement>t</placement>
                             <head>Status: experimental API</head>
+                        </tag>
+                        <tag>
+                            <name>stereotype</name>
+                            <placement>t</placement>
+                            <head>Stereotype:</head>
                         </tag>
                     </tags>
                 </configuration>
