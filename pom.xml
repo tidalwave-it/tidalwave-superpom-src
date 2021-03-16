@@ -247,5 +247,35 @@
         </plugins>
     </build>
 
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>${tft.maven-javadoc-plugin.version}</version>
+                <!-- Configuration must be replicated from build section -->
+                <configuration>
+                    <tags>
+                        <tag>
+                            <name>it.tidalwave.javadoc.stable</name>
+                            <placement>t</placement>
+                            <head>Status: stable API</head>
+                        </tag>
+                        <tag>
+                            <name>it.tidalwave.javadoc.draft</name>
+                            <placement>t</placement>
+                            <head>Status: draft API</head>
+                        </tag>
+                        <tag>
+                            <name>it.tidalwave.javadoc.experimental</name>
+                            <placement>t</placement>
+                            <head>Status: experimental API</head>
+                        </tag>
+                    </tags>
+                </configuration>
+            </plugin>
+        </plugins>
+    </reporting>
+
 </project>
 
