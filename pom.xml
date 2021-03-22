@@ -215,6 +215,11 @@
                             <placement>t</placement>
                             <head>Stereotype:</head>
                         </tag>
+                        <tag>
+                            <name>hidden</name>
+                            <placement>t</placement>
+                            <head></head>
+                        </tag>
                     </tags>
                 </configuration>
             </plugin>
@@ -286,6 +291,11 @@
                             <name>stereotype</name>
                             <placement>t</placement>
                             <head>Stereotype:</head>
+                        </tag>
+                        <tag>
+                            <name>hidden</name>
+                            <placement>t</placement>
+                            <head></head>
                         </tag>
                     </tags>
                 </configuration>
