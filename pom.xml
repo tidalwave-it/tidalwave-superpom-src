@@ -121,6 +121,13 @@
                 <dependency>
                     <groupId>org.springframework</groupId>
                     <artifactId>spring-aspects</artifactId>
+                    <!-- See enforcer of banned dependencies. -->
+                    <exclusions>
+                        <exclusion>
+                            <groupId>org.aspectj</groupId>
+                            <artifactId>aspectjweaver</artifactId>
+                        </exclusion>
+                    </exclusions>
                 </dependency>
                 <dependency>
                     <groupId>org.aspectj</groupId>
@@ -222,6 +229,7 @@
                     </tags>
                 </configuration>
             </plugin>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
@@ -234,6 +242,7 @@
                     </properties>
                 </configuration>
             </plugin>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-enforcer-plugin</artifactId>
@@ -248,9 +257,10 @@
                                 <bannedDependencies>
                                     <excludes>
                                         <exclude>commons-logging:commons-logging</exclude>
-                                        <exclude>org.aspectj:aspectjweaver</exclude>
                                         <exclude>com.kenai.nbpwr:org-slf4j-jdk14</exclude>
                                         <exclude>com.google.code.findbugs:annotations</exclude>
+                                        <!-- We use static weaving only. -->
+                                        <exclude>org.aspectj:aspectjweaver</exclude>
                                     </excludes>
                                 </bannedDependencies>
                             </rules>
