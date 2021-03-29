@@ -336,13 +336,19 @@
                             <header>${tft.header}</header>
                             <excludes>
                                 <exclude>**/README.md</exclude>
-                                <exclude>src/test/resources/**</exclude>
-                                <exclude>src/main/resources/**</exclude>
+                                <!-- Keep *.xml -->
+                                <exclude>src/main/resources/**/*.txt</exclude>
+                                <exclude>src/main/resources/**/*.properties</exclude>
+                                <exclude>src/test/resources/**/*.txt</exclude>
+                                <exclude>src/test/resources/**/*.properties</exclude>
                                 <exclude>**/.maven-env</exclude>
                                 <exclude>**/.maven-local-env</exclude>
                                 <exclude>**/lombok.config</exclude>
                                 <exclude>**/*.form</exclude>
                                 <exclude>**/*-profile</exclude>
+                                <exclude>**/.idea/**/*</exclude>
+                                <exclude>bitbucket-pipelines.yml</exclude>
+                                <exclude>LICENSE.md</exclude>
                             </excludes>
                         </licenseSet>
                     </licenseSets>
