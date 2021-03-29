@@ -14,7 +14,7 @@
     <packaging>pom</packaging>
     <version>5.0-ALPHA-10-SNAPSHOT</version>
     <name>Tidalwave - SuperPOM</name>
-    <url>http://tidalwave.tidalwave.it</url>
+    <url>http://tidalwave.it/projects</url>
     <inceptionYear>2010</inceptionYear>
     <description>
         [![Build
@@ -31,7 +31,6 @@
         <tidalwave.ci.view />
         <tidalwave.issues />
         <tft.test.listeners>it.tidalwave.util.test.TestLogger</tft.test.listeners>
-
         <tft.UmlGraphDoc.additionalParam>
             -views -attributes -operations -types -postfixpackage -nodefontpackagesize 6 -nodefontclasssize 8 -nodefontsize 7 -edgefontsize 7 -nodesep 0.05
             -ranksep 0.1 -visibility -inferrel -hide java.*|javax.*
@@ -197,25 +196,6 @@
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-enforcer-plugin</artifactId>
-                <version>${tft.maven-enforcer-plugin.version}</version>
-                <executions>
-                    <execution>
-                        <id>enforce-maven</id>
-                        <goals>
-                            <goal>enforce</goal>
-                        </goals>
-                        <configuration>
-                            <rules>
-                                <dependencyConvergence />
-                            </rules>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <!-- Configuration must be replicated in reporting section -->
                 <configuration>
@@ -266,6 +246,17 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-enforcer-plugin</artifactId>
                 <executions>
+                    <execution>
+                        <id>enforce-maven</id>
+                        <goals>
+                            <goal>enforce</goal>
+                        </goals>
+                        <configuration>
+                            <rules>
+                                <dependencyConvergence />
+                            </rules>
+                        </configuration>
+                    </execution>
                     <execution>
                         <id>enforce-banned-dependencies</id>
                         <goals>
