@@ -32,7 +32,7 @@
         <tidalwave.issues />
         <tidalwave.github.readonly.url />
         <tidalwave.slogan>${project.name}</tidalwave.slogan>
-        <tft.header>it/tidalwave/header.txt</tft.header> <!-- relative to src/main/resources -->
+        <tft.header>it/tidalwave/header/header.txt</tft.header> <!-- relative to src/main/resources -->
         <tft.header.year>2021</tft.header.year>
         <tft.test.listeners>it.tidalwave.util.test.TestLogger</tft.test.listeners>
         <tft.UmlGraphDoc.additionalParam>
@@ -63,12 +63,12 @@
         <repository>
             <id>releases-oss.sonatype.org</id>
             <name>Sonatype Release Repository</name>
-            <url>http://oss.sonatype.org/content/repositories/releases/</url>
+            <url>https://oss.sonatype.org/content/repositories/releases/</url>
         </repository>
         <repository>
             <id>maven2-thirdparty-repository.tidalwave.it</id>
             <name>Tidalwave Release Repository</name>
-            <url>http://services.tidalwave.it/nexus/content/repositories/thirdparty/</url>
+            <url>https://services.tidalwave.it/nexus/content/repositories/thirdparty/</url>
         </repository>
     </repositories>
 
@@ -348,13 +348,15 @@
                                 <exclude>**/*-profile</exclude>
                                 <exclude>**/.idea/**/*</exclude>
                                 <exclude>bitbucket-pipelines.yml</exclude>
-                                <exclude>LICENSE.md</exclude>
+                                <exclude>LICENSE.*</exclude>
+                                <exclude>.lgtm.yml</exclude>
                             </excludes>
                         </licenseSet>
                     </licenseSets>
                     <defaultProperties>
                         <scm.repo.readonly.url>${scm.repo.readonly.url}</scm.repo.readonly.url>
                         <tidalwave.slogan>${tidalwave.slogan}</tidalwave.slogan>
+                        <tidalwave.project.url>${tidalwave.project.url}</tidalwave.project.url>
                         <tidalwave.github.readonly.url>${tidalwave.github.readonly.url}</tidalwave.github.readonly.url>
                         <tft.header.year>${tft.header.year}</tft.header.year>
                         <project.organization.name>${project.organization.name}</project.organization.name>
