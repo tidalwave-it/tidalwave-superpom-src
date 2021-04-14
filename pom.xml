@@ -47,7 +47,7 @@
         <tft.javax-annotation.version>1.3.2</tft.javax-annotation.version>
         <tft.jaxb.version>3.0.0</tft.jaxb.version>
         <tft.findbugs-annotations.version>3.1.9</tft.findbugs-annotations.version>
-        <tft.junit.version>4.12</tft.junit.version>
+        <tft.junit.version>4.13.1</tft.junit.version>
         <tft.logback.version>1.2.3</tft.logback.version>
         <tft.lombok.version>1.18.18</tft.lombok.version>
         <tft.mockito.version>3.8.0</tft.mockito.version>
