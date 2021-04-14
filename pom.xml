@@ -5,7 +5,7 @@
     <parent>
         <groupId>it.tidalwave.thesefoolishthings</groupId>
         <artifactId>superpom</artifactId>
-        <version>5.0-ALPHA-12</version>
+        <version>5.0-ALPHA-12-SNAPSHOT</version>
         <relativePath />
     </parent>
 
@@ -39,6 +39,9 @@
             -views -attributes -operations -types -postfixpackage -nodefontpackagesize 6 -nodefontclasssize 8 -nodefontsize 7 -edgefontsize 7 -nodesep 0.05
             -ranksep 0.1 -visibility -inferrel -hide java.*|javax.*
         </tft.UmlGraphDoc.additionalParam>
+
+        <!-- Common Tidalwave libraries. -->
+        <tft.jaxb.version>3.0.0</tft.jaxb.version>
     </properties>
 
     <!-- Repeated because of http://jira.codehaus.org/browse/SCM-442 -->
@@ -363,6 +366,29 @@
                         <project.organization.url>${project.organization.url}</project.organization.url>
                     </defaultProperties>
                 </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>jaxb2-maven-plugin</artifactId>
+                <!-- TODO: version 3.0.0 is not found on Maven Central, so we're patching 2.5.0 to work with Jakarta JAXB. -->
+                <dependencies>
+                    <dependency>
+                        <groupId>org.glassfish.jaxb</groupId>
+                        <artifactId>jaxb-xjc</artifactId>
+                        <version>${tft.jaxb.version}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>jakarta.xml.bind</groupId>
+                        <artifactId>jakarta.xml.bind-api</artifactId>
+                        <version>${tft.jaxb.version}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>com.sun.xml.bind</groupId>
+                        <artifactId>jaxb-impl</artifactId>
+                        <version>${tft.jaxb.version}</version>
+                    </dependency>
+                </dependencies>
             </plugin>
         </plugins>
     </build>
