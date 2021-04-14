@@ -6,11 +6,39 @@
 Tidalwave - SuperPOM
 ================================
 
-[![Build Status](https://drone.io/bitbucket.org/tidalwave/tidalwave-superpom-src/status.png)](https://drone.io/bitbucket.org/tidalwave/tidalwave-superpom-src/latest)
+[![Build
+Status](https://drone.io/bitbucket.org/tidalwave/tidalwave-superpom-src/status.png)](https://drone.io/bitbucket.org/tidalwave/tidalwave-superpom-src/latest)
 
-The SuperPOM for all Tidalwave projects. It is not designed for being used by others, as it contains some corporate-specific
-configurations, but its ancestor [TheseFooolishThings SuperPOM](http://bitbucket.org/tidalwave/thesefoolishthings-superpom-src) has been designed to be reusable.
-Please have a look at it.
+The super POM for all Tidalwave projects. It is not designed for being used by others, as it contains some corporate-specific configurations, but its
+ancestor [TheseFooolishThings SuperPOM](http://bitbucket.org/tidalwave/thesefoolishthings-superpom-src) has been designed to be reusable. Please have a
+look at it.
+
+This super POM adds to its ancestor:
+
++ some Tidalwave variables that refers to the issue tracker, continuous integration system, etc...;
++ the definitions of versions of a number of commonly used libraries and their dependency management:
+    * [AspectJ](https://www.eclipse.org/aspectj)
+    * [Hamcrest Matchers](http://hamcrest.org/JavaHamcrest)
+    * [JSR 330](https://github.com/google/guice/wiki/JSR330)
+    * [Jakarta XML Binding (JAXB)](https://eclipse-ee4j.github.io/jaxb-ri/)
+    * [Spotbugs annotations](https://spotbugs.readthedocs.io)
+    * [JUnit](https://junit.org/junit5)
+    * [Logback](http://logback.qos.ch)
+    * [Lombok](https://projectlombok.org)
+    * [SLF4J](slf4j.org)
+    * [Spring 5](https://spring.io/projects/spring-framework)
+    * [TestNG](https://testng.org)
++ the definition for Tidalwave 3rd party repository (stuff that is not available on Maven Central);
++ a profile for using the [TheseFoolishThings](http://tidalwave.it/projects/thesefoolishthings) Event Bus (```it.tidalwave-spring-messagebus-v1```);
++ profiles for the [Mycila License plugin](https://github.com/mycila/license-maven-plugin);
++ configuration of the UMLGraphDoc maven plugin;
++ the configuration for the TheseFoolishThings TestNG listener (which provides enhanced test logging);
++ definitions of some custom javadoc tags;
++ a blacklist for some old artifacts;
++ some other minor customisations.
+
+To learn more about the things of this project, please have a look at its site - http://tidalwave.it/projects - where more documentation, javadoc
+and build reports are provided.
 
 
 Bootstrapping
@@ -26,23 +54,7 @@ The project can be opened and built by a recent version of the NetBeans, Eclipse
 Documentation
 -------------
 
-More information can be found on the [homepage](http://tidalwave.tidalwave.it) of the project.
-
-
-Where can I get the latest release?
------------------------------------
-
-You can download source and binaries from the [download page](${scm.repo.browse.url}).
-
-Alternatively you can pull it from the central Maven repositories:
-
-```xml
-<dependency>
-    <groupId>it.tidalwave.superpom<groupId>
-    <artifactId>superpom</artifactId>
-    <version>-- version --</version>
-</dependency>
-```
+More information can be found on the [homepage](http://tidalwave.it/projects) of the project.
 
 
 Contributing
@@ -73,5 +85,3 @@ Additional Resources
 --------------------
 
 * [Tidalwave Homepage](http://tidalwave.it)
-* [Project Issue Tracker (Jira)](http://services.tidalwave.it/jira/browse/${tidalwave.issues})
-* [Project Continuous Integration (Jenkins)](http://services.tidalwave.it/ci/view/)
