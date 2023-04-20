@@ -64,7 +64,7 @@ This super POM adds to its ancestor:
         </tft.UmlGraphDoc.additionalParam>
 
         <!-- Common Tidalwave libraries. -->
-        <tft.aspectjrt.version>1.9.6</tft.aspectjrt.version>
+        <tft.aspectjrt.version>1.9.19</tft.aspectjrt.version>
         <tft.hamcrest-matchers.version>1.3</tft.hamcrest-matchers.version>
         <tft.jsr330.version>1</tft.jsr330.version>
         <tft.javax-annotation.version>1.3.2</tft.javax-annotation.version>
