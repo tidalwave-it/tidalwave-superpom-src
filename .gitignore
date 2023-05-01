@@ -13,3 +13,4 @@ release.properties
 *.iml
 Maven__*.xml
 .maven-local-env
+/.idea/
