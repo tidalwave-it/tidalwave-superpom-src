@@ -76,7 +76,7 @@ This super POM adds to its ancestor:
         <tft.mockito.version>4.8.1</tft.mockito.version>
         <tft.slf4j.version>2.0.16</tft.slf4j.version>
         <tft.spring.version>5.3.37</tft.spring.version>
-        <tft.testng.version>7.7.1</tft.testng.version>
+        <tft.testng.version>7.10.2</tft.testng.version>
     </properties>
 
     <!-- Repeated because of http://jira.codehaus.org/browse/SCM-442 -->
