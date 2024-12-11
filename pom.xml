@@ -71,7 +71,7 @@ This super POM adds to its ancestor:
         <tft.jaxb.version>3.0.0</tft.jaxb.version>
         <tft.findbugs-annotations.version>3.1.9</tft.findbugs-annotations.version>
         <tft.junit.version>5.8.2</tft.junit.version>
-        <tft.logback.version>1.4.7</tft.logback.version>
+        <tft.logback.version>1.5.12</tft.logback.version>
         <tft.lombok.version>1.18.36</tft.lombok.version>
         <tft.mockito.version>4.8.1</tft.mockito.version>
         <tft.slf4j.version>2.0.16</tft.slf4j.version>
