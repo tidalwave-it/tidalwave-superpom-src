@@ -77,6 +77,8 @@ This super POM adds to its ancestor:
         <tft.slf4j.version>2.0.16</tft.slf4j.version>
         <tft.spring.version>5.3.37</tft.spring.version>
         <tft.testng.version>7.10.2</tft.testng.version>
+
+        <tft.maven-fluido-skin.version>2.0.0</tft.maven-fluido-skin.version>
     </properties>
 
     <!-- Repeated because of http://jira.codehaus.org/browse/SCM-442 -->
@@ -416,6 +418,19 @@ This super POM adds to its ancestor:
                         </configuration>
                     </execution>
                 </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.apache.maven.skins</groupId>
+                        <artifactId>maven-fluido-skin</artifactId>
+                        <version>${tft.maven-fluido-skin.version}</version>
+                        <scope>compile</scope>
+                    </dependency>
+                </dependencies>
             </plugin>
 
             <plugin>
