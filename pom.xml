@@ -409,8 +409,10 @@ This super POM adds to its ancestor:
                                         <exclude>commons-logging:commons-logging</exclude>
                                         <exclude>com.kenai.nbpwr:org-slf4j-jdk14</exclude>
                                         <exclude>com.google.code.findbugs:annotations</exclude>
-                                        <!-- We use static weaving only. -->
-                                        <exclude>org.aspectj:aspectjweaver</exclude>
+                                        <!-- We use static weaving only, but now is required anyway:
+                                         See https://stackoverflow.com/questions/77791637/is-aspectjweaver-dependency-mandatory-for-spring-boot
+                                         -->
+                                        <!-- exclude>org.aspectj:aspectjweaver</exclude -->
                                     </excludes>
                                 </bannedDependencies>
                             </rules>
