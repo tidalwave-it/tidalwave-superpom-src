@@ -12,7 +12,7 @@
     <groupId>it.tidalwave.superpom</groupId>
     <artifactId>superpom</artifactId>
     <packaging>pom</packaging>
-    <version>5.5</version>
+    <version>5.6-SNAPSHOT</version>
     <name>Tidalwave - SuperPOM</name>
     <url>http://tidalwave.it/projects</url>
     <inceptionYear>2010</inceptionYear>
@@ -86,7 +86,7 @@ This super POM adds to its ancestor:
         <connection>scm:git:${scm.repo.readonly.url}</connection>
         <developerConnection>scm:git:${scm.repo.effective.url}</developerConnection>
         <url>${scm.repo.browse.url}</url>
-        <tag>5.5</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <issueManagement>
