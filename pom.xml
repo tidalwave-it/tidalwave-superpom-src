@@ -50,7 +50,7 @@ This super POM adds to its ancestor:
     </description>
 
     <properties>
-        <tft.maven.requiredVersion>3.6.0</tft.maven.requiredVersion>
+        <tft.maven.requiredVersion>3.9.9</tft.maven.requiredVersion>
         <tidalwave.ci.view />
         <tidalwave.issues />
         <tidalwave.github.readonly.url />
