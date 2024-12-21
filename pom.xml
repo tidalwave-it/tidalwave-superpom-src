@@ -71,7 +71,7 @@ This super POM adds to its ancestor:
         <tft.jaxb.version>3.0.0</tft.jaxb.version>
         <tft.findbugs-annotations.version>3.1.9</tft.findbugs-annotations.version>
         <tft.junit.version>5.11.3</tft.junit.version>
-        <tft.logback.version>1.5.12</tft.logback.version>
+        <tft.logback.version>1.5.15</tft.logback.version>
         <tft.lombok.version>1.18.36</tft.lombok.version>
         <tft.mockito.version>5.13.0</tft.mockito.version>
         <tft.slf4j.version>2.0.16</tft.slf4j.version>
@@ -114,7 +114,7 @@ This super POM adds to its ancestor:
 
     <dependencyManagement>
         <dependencies>
-            <dependency>
+            <dependency> <!-- TODO BOM? -->
                 <groupId>org.aspectj</groupId>
                 <artifactId>aspectjrt</artifactId>
                 <version>${tft.aspectjrt.version}</version>
@@ -125,7 +125,7 @@ This super POM adds to its ancestor:
                 <version>${tft.aspectjrt.version}</version>
             </dependency>
 
-            <dependency>
+            <dependency> <!-- TODO BOM? -->
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-api</artifactId>
                 <version>${tft.slf4j.version}</version>
@@ -141,7 +141,7 @@ This super POM adds to its ancestor:
                 <version>${tft.slf4j.version}</version>
             </dependency>
 
-            <dependency>
+            <dependency> <!-- TODO BOM? -->
                 <groupId>ch.qos.logback</groupId>
                 <artifactId>logback-core</artifactId>
                 <version>${tft.logback.version}</version>
@@ -224,13 +224,6 @@ This super POM adds to its ancestor:
                 <dependency>
                     <groupId>org.springframework</groupId>
                     <artifactId>spring-aspects</artifactId>
-                    <!-- See enforcer of banned dependencies. -->
-                    <exclusions>
-                        <exclusion>
-                            <groupId>org.aspectj</groupId>
-                            <artifactId>aspectjweaver</artifactId>
-                        </exclusion>
-                    </exclusions>
                 </dependency>
                 <dependency>
                     <groupId>org.aspectj</groupId>
