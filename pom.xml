@@ -69,7 +69,7 @@ This super POM adds to its ancestor:
         <tft.jsr330.version>1</tft.jsr330.version>
         <tft.javax-annotation.version>1.3.2</tft.javax-annotation.version>
         <tft.jaxb.version>3.0.0</tft.jaxb.version>
-        <tft.findbugs-annotations.version>3.1.9</tft.findbugs-annotations.version>
+        <tft.spotbugs-annotations.version>4.8.6</tft.spotbugs-annotations.version>
         <tft.junit.version>5.11.3</tft.junit.version>
         <tft.logback.version>1.5.15</tft.logback.version>
         <tft.lombok.version>1.18.36</tft.lombok.version>
@@ -166,7 +166,7 @@ This super POM adds to its ancestor:
             <dependency>
                 <groupId>com.github.spotbugs</groupId>
                 <artifactId>spotbugs-annotations</artifactId>
-                <version>${tft.findbugs-annotations.version}</version>
+                <version>${tft.spotbugs-annotations.version}</version>
             </dependency>
 
             <dependency>
