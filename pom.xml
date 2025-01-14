@@ -5,14 +5,14 @@
     <parent>
         <groupId>it.tidalwave.thesefoolishthings</groupId>
         <artifactId>superpom</artifactId>
-         <version>5.11</version>
+         <version>5.12</version>
         <relativePath />
     </parent>
 
     <groupId>it.tidalwave.superpom</groupId>
     <artifactId>superpom</artifactId>
     <packaging>pom</packaging>
-    <version>5.11.2-SNAPSHOT</version>
+    <version>5.12-SNAPSHOT</version>
     <name>Tidalwave - SuperPOM</name>
     <url>http://tidalwave.it/projects</url>
     <inceptionYear>2010</inceptionYear>
