@@ -79,7 +79,7 @@ This super POM adds to its ancestor:
         <tft.lombok.version>1.18.36</tft.lombok.version>
         <tft.mockito.version>5.13.0</tft.mockito.version>
         <tft.slf4j.version>2.0.16</tft.slf4j.version>
-        <tft.spring.version>6.2.1</tft.spring.version>
+        <tft.spring.version>6.2.2</tft.spring.version>
         <tft.spring-boot.version>3.4.1</tft.spring-boot.version>
         <tft.testfx.version>4.0.18</tft.testfx.version>
         <tft.openjfx-monocle.version>11.0.2</tft.openjfx-monocle.version>
