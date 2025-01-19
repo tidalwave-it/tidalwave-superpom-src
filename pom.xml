@@ -73,7 +73,7 @@ This super POM adds to its ancestor:
         <tft.jaxb.version>3.0.0</tft.jaxb.version>
         <tft.jakarta.inject-api.version>2.0.1</tft.jakarta.inject-api.version>
         <tft.jakarta.common-annotations-api.version>3.0.0</tft.jakarta.common-annotations-api.version>
-        <tft.spotbugs-annotations.version>4.8.6</tft.spotbugs-annotations.version>
+        <tft.spotbugs-annotations.version>4.9.0</tft.spotbugs-annotations.version>
         <tft.junit.version>5.11.4</tft.junit.version>
         <tft.logback.version>1.5.16</tft.logback.version>
         <tft.lombok.version>1.18.36</tft.lombok.version>
