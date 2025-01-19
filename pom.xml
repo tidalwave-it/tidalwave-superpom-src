@@ -266,7 +266,7 @@ This super POM adds to its ancestor:
                 </dependency>
                 <dependency>
                     <groupId>org.aspectj</groupId>
-                    <artifactId>aspectjrt</artifactId>
+                    <artifactId>aspectjweaver</artifactId>
                 </dependency>
             </dependencies>
 
