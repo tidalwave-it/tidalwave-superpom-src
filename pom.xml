@@ -65,7 +65,7 @@ This super POM adds to its ancestor:
 
         <!-- Common Tidalwave libraries. -->
         <tft.apiguardian-api.version>1.1.2</tft.apiguardian-api.version>
-        <tft.aspectjrt.version>1.9.22.1</tft.aspectjrt.version>
+        <tft.aspectjrt.version>1.9.24</tft.aspectjrt.version>
         <tft.assertj.core.version>3.27.3</tft.assertj.core.version>
         <tft.hamcrest-matchers.version>3.0</tft.hamcrest-matchers.version>
         <tft.jsr330.version>1</tft.jsr330.version>
