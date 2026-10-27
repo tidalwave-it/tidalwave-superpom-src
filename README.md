@@ -54,7 +54,7 @@ The project can be opened and built by a recent version of the NetBeans, Eclipse
 Documentation
 -------------
 
-More information can be found on the [homepage](http://tidalwave.it/projects) of the project.
+The manual is [here](MANUAL.md).
 
 
 Contributing
