@@ -82,7 +82,7 @@ This super POM adds to its ancestor:
         <tft.spring.version>6.2.9</tft.spring.version>
         <tft.spring-boot.version>3.5.4</tft.spring-boot.version>
         <tft.testfx.version>4.0.18</tft.testfx.version>
-        <tft.testng.version>7.11.0</tft.testng.version>
+        <tft.testng.version>7.12.0</tft.testng.version>
 
         <tft.maven-fluido-skin.version>2.1.0</tft.maven-fluido-skin.version>
     </properties>
